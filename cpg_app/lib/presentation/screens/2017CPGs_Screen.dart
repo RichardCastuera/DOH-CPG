@@ -24,34 +24,38 @@ class _CPG2017ScreenState extends State<CPG2017Screen> {
         child: ListView.builder(
           itemCount: cpg2017.length,
           itemBuilder: (context, index) {
-            return Card(
-              margin: const EdgeInsets.symmetric(vertical: 5),
-              child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      cpg2017[index].cpgTitle,
-                      style: TextStyle(
-                        fontFamily: 'Poppins',
-                        color: AppColors.black,
-                        fontSize: screenHeight * 0.018,
-                        fontWeight: FontWeight.w500,
+            return GestureDetector(
+              onTap: () =>
+                  Navigator.pushNamed(context, cpg2017[index].navigateTo),
+              child: Card(
+                margin: const EdgeInsets.symmetric(vertical: 5),
+                child: Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        cpg2017[index].cpgTitle,
+                        style: TextStyle(
+                          fontFamily: 'Poppins',
+                          color: AppColors.black,
+                          fontSize: screenHeight * 0.018,
+                          fontWeight: FontWeight.w500,
+                        ),
                       ),
-                    ),
-                    const SizedBox(height: 10),
-                    Text(
-                      cpg2017[index].leadDevelopers,
-                      style: TextStyle(
-                        fontFamily: 'Poppins',
-                        color: AppColors.black.withOpacity(.50),
-                        fontSize: screenHeight * 0.013,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    )
-                  ],
+                      const SizedBox(height: 10),
+                      Text(
+                        cpg2017[index].leadDevelopers,
+                        style: TextStyle(
+                          fontFamily: 'Poppins',
+                          color: AppColors.black.withOpacity(.50),
+                          fontSize: screenHeight * 0.013,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
             );
