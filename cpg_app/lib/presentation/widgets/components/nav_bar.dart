@@ -12,7 +12,7 @@ NavigationBarTheme applicationNavBar(
             return const TextStyle(
               fontFamily: 'Poppins',
               fontSize: 13,
-              fontWeight: FontWeight.w700,
+              fontWeight: FontWeight.w600,
             );
           }
           return const TextStyle(

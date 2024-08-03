@@ -1,8 +1,9 @@
 import 'package:cpg_app/model/cpg_data.dart';
 import 'package:cpg_app/presentation/constants/app_colors.dart';
-import 'package:cpg_app/presentation/screens/pdf_viewer.dart';
+import 'package:cpg_app/presentation/screens/PDF/pdf_viewer.dart';
 import 'package:cpg_app/presentation/widgets/components/app_bar.dart';
 import 'package:cpg_app/presentation/widgets/components/no_data_found.dart';
+import 'package:cpg_app/presentation/widgets/components/segmented_button.dart';
 import 'package:flutter/material.dart';
 
 enum ContentView { active, archive }
@@ -52,21 +53,9 @@ class _ContentScreenState extends State<ContentScreen> {
                 ),
               ),
               const SizedBox(height: 15),
-              SegmentedButton<ContentView>(
-                segments: const <ButtonSegment<ContentView>>[
-                  ButtonSegment<ContentView>(
-                    value: ContentView.active,
-                    label: Text('Active'),
-                    icon: Icon(Icons.check_circle_rounded),
-                  ),
-                  ButtonSegment<ContentView>(
-                    value: ContentView.archive,
-                    label: Text('Archive'),
-                    icon: Icon(Icons.archive),
-                  ),
-                ],
-                selected: <ContentView>{contentView},
-                onSelectionChanged: (Set<ContentView> newSelection) {
+              segmentedButton(
+                contentView,
+                (Set<ContentView> newSelection) {
                   setState(() {
                     contentView = newSelection.first;
                   });
