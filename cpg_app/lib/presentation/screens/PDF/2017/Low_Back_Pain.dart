@@ -1,3 +1,4 @@
+import 'package:cpg_app/presentation/screens/PDF/pdf_load_error_handler.dart';
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
@@ -14,7 +15,13 @@ class _LowBackPainPDFState extends State<LowBackPainPDF> {
     return SafeArea(
       child: Scaffold(
         body: SfPdfViewer.asset(
-            'assets/pdf/2017/Diagnosis_and_Management_of_Low_Back_Pain.pdf'),
+          'assets/pdf/2017/Diagnosis_and_Management_of_Low_Back_Pain.pdf',
+          canShowPageLoadingIndicator: true,
+          pageSpacing: 10,
+          onDocumentLoadFailed: (PdfDocumentLoadFailedDetails details) {
+            showErrorDialog(context, details.error, details.description);
+          },
+        ),
       ),
     );
   }

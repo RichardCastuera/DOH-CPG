@@ -1,6 +1,4 @@
-import 'package:cpg_app/presentation/constants/app_route.dart';
 import 'package:cpg_app/presentation/screens/home_screen.dart';
-import 'package:cpg_app/routes/app_router.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,10 +10,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      theme: ThemeData(
+        colorSchemeSeed: const Color(0xff597445),
+        useMaterial3: true,
+      ),
       debugShowCheckedModeBanner: false,
-      initialRoute: homeRoute,
-      onGenerateRoute: generateRoute,
+      home: const HomeScreen(),
     );
   }
 }

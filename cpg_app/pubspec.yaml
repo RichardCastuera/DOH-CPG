@@ -14,6 +14,8 @@ dependencies:
 
   cupertino_icons: ^1.0.6
   syncfusion_flutter_pdfviewer: ^26.1.41
+  path: ^1.9.0
+  lottie: ^3.1.2
 
 dev_dependencies:
   flutter_test:
@@ -25,8 +27,70 @@ flutter:
   uses-material-design: true
 
   assets:
+    - assets/lottie/
     - assets/img/
-    - assets/pdf/2017/
+      # Active PDF Paths
+    - assets/pdf/AcuteInfectiousDiarrhea/TheCPGontheManagementofAcuteInfectiousDiarrheainChildrenandAdults.pdf
+    - assets/pdf/Acute ischemic Stroke and Intracerebral Hemorrhage/[CPG] Clinical Practice Guidelines on the Management of Acute Ischemic Stroke and Intracerebral Hemorrhage in the Philippines 2024.pdf
+    - assets/pdf/Acute Lymphoblastic Leukemia/[CPG] Clinical Practice Guideline for the Diagnosis and Management of Acute  Lymphoblastic Leukemia.pdf
+    - assets/pdf/Acute Myeloid Leukemia/[CPG] Acute Myeloid Leukemia National Clinical Practice Guidelines.pdf
+    - assets/pdf/Breast Cancer/[CPG] Breast Cancer National Clinical Practice Guidelines.pdf
+    - assets/pdf/Burkitt Lymphoma in Children/[CPG] Diagnosis, Management, Psychosocial Support and Palliative Care of Burkitt Lymphoma in Children and  their Families.pdf
+    - assets/pdf/Cervical Cancer/Abnormal Cervical Cancer Screening Results/[CPG] Management of Abnormal Cervical Cancer Screening Results.pdf
+    - assets/pdf/Cervical Cancer/Cervical Cancer Prevention and Treatment of Premalignant Lesions of the Cervix/[CPG] Cervical Cancer Prevention and the Treatment of Premalignant Lesions of the Cervix.pdf
+    - assets/pdf/Chronic Heart Failure with Reduced Ejection Fraction/[CPG] Diagnosis and Management of Chronic Heart Failure with Reduced Ejection Fraction for Primary Care Physicians.pdf
+    - assets/pdf/Chronic Obstructive Pulmonary Disease/[CPG] Clinical Practice Guidelines for the Management of Chronic Obstructive Pulmonary Disease.pdf
+    - assets/pdf/Colorectal Cancer/[CPG] Colorectal Cancer National Clinical Practice Guidelines.pdf
+    - assets/pdf/Contact Dermatitis/[CPG] Philippine Clinical Practice Guidelines on Contact Dermatitis .pdf
+    - assets/pdf/COVID-19/Living COVID-19 Guidelines/[CPG] Philippine Living COVID-19 Clinical Practice Guidelines Phase 2.pdf
+    - assets/pdf/COVID-19/Pediatric COVID-19 Guidelines/[CPG] Philippine Pediatric COVID-19 Living Clinical Practice Guidelines .pdf
+    - assets/pdf/Dengue/[CPG] Clinical Practice Guideline on the Diagnosis, Management and Prevention of Dengue for Adult and Pediatric Filipinos in the Primary Care Setting.pdf
+    - assets/pdf/Diffuse Large B-Cell Lymphoma/[CPG] Diffuse Large B-Cell Lymphoma National Clinical Practice Guidelines.pdf
+    - assets/pdf/Dyslipidemia/[CPG] 2020 Clinical Practice Guidelines for the Management of Dyslipidemia in the Philippines.pdf
+    - assets/pdf/End of life care for Adults with Cancer/[CPG] Philippine Clinical Practice Guideline on Palliative and End-of-Life Care for Adults with Cancer.pdf
+    - assets/pdf/Gastric Cancer and Helicobacter pylori/[CPG] Clinical Practice Guidelines on the Management of Gastric Cancer and Helicobacter pylori in the Philippines.pdf
+    - assets/pdf/Head and Neck Cancer/[CPG] Philippine Head and Neck Cancer Clinical Practice Guidelines.pdf
+    - assets/pdf/Hemodialysis/[CPG] Philippine Clinical Practice Guidelines on Hemodialysis.pdf
+    - assets/pdf/Hepatitis B/[CPG] 2021 Clinical Practice Guidelines on the Management of Hepatitis B in the Philippines_Full Manuscript.pdf
+    - assets/pdf/Hepatocellular Carcinoma/[CPG] Philippine Clinical Practice Guideline for the Diagnosis and Management of Hepatocellular Carcinoma.pdf
+    - assets/pdf/Hypertension/[CPG] Clinical Practice Guidelines for the Management of Hypertension in the Philippines.pdf
+    - assets/pdf/Hyperthyroidism/updated_[CPG] Philippine Clinical Practice Guideline for the Diagnosis and Management of Hyperthyroidism.pdf
+    - assets/pdf/Immunization for Adults/Updated_[CPG] Philippine Guidelines on Periodic Health Examination Adult Immunization, 2023 Updates.pdf
+    - assets/pdf/Immunization for Women/[CPG] Clinical Practice Guidelines on Immunization for Women.pdf
+    - assets/pdf/Isolated Mandibular Fracture in Adults/[CPG] Management of Isolated Mandibular Body Fractures in Adults.pdf
+    - assets/pdf/Leprosy/[CPG] Leprosy Clinical Practice Guidelines 2021.pdf
+    - assets/pdf/Low Back Pain/[CPG] Clinical Practice Guidelines on the Diagnosis and Management of Low  Back Pain (2nd Edition).pdf
+    - assets/pdf/Lung Cancer/[CPG] Philippine Practice Guidelines for the Diagnosis, Staging, and Management of Lung Carcinoma.pdf
+    - assets/pdf/Neonatal Sepsis/[CPG] Clinical Practice Guidelines for the Screening, Diagnosis, Treatment and Prevention of Neonatal Sepsis.pdf
+    - assets/pdf/Nicotine Dependence/[CPG] Update of the Clinical Practice Guidelines on the Diagnosis and Management of Nicotine Dependence 2021.pdf
+    - assets/pdf/Obesity Screening and Diagnosis in Adults/[CPG] Philippine Clinical Practice Guidelines for the Screening and Diagnosis of Obesity in Adults.pdf
+    - assets/pdf/Pediatric Asthma/[CPG] PAPP Clinical Practice Guidelines for Pediatric Asthma 2021.pdf
+    - assets/pdf/Pediatric Community Acquired Pneumonia/[CPG] 2021 Clinical Practice Guidelines in the Evaluation and Management of Pediatric Community-Acquired Pneumonia.pdf
+    - assets/pdf/Pediatric Immunization/[CPG] Philippine Guidelines on Periodic Health Examination Pediatric Immunization, 2023 Update.pdf
+    - assets/pdf/Philippine Periodic Health Examination and other Screening Tests/Cardiovascular Disease Screening/[CPG] Philippine Guidelines on Periodic Health Examination_ Screening for Cardiovascular Disease.pdf
+    - assets/pdf/Philippine Periodic Health Examination and other Screening Tests/Congenital and Developmental Dsorder Screening/[CPG] Periodic Health Examination Screening for Congenital and Developmental Disorders.pdf
+    - assets/pdf/Philippine Periodic Health Examination and other Screening Tests/Hearing Disorders Screening/[CPG] Philippine Guidelines on Periodic Health Examination_ Screening for Hearing Disorders.pdf
+    - assets/pdf/Philippine Periodic Health Examination and other Screening Tests/Infectious Disease Screening/[CPG] Philippine Guidelines on Periodic Health Examination Screening for Infectious Diseases.pdf
+    - assets/pdf/Philippine Periodic Health Examination and other Screening Tests/Lifestyle Advice/[CPG] Philippine Guidelines on Periodic Health Examination_ Lifestyle Advice.pdf
+    - assets/pdf/Philippine Periodic Health Examination and other Screening Tests/Mental Health and Addiction Screening/[CPG] PHES for Mental Health and Addiction.pdf
+    - assets/pdf/Philippine Periodic Health Examination and other Screening Tests/Musculoskeletal Disorders Screening/[CPG] PHES for Musculoskeletal Disorders.pdf
+    - assets/pdf/Philippine Periodic Health Examination and other Screening Tests/Neoplastic Diseases Screening/[CPG] Philippine Guidelines on Periodic Health Examination_ Screening for Neoplastic Diseases.pdf
+    - assets/pdf/Philippine Periodic Health Examination and other Screening Tests/Periodic Health Examination/[CPG] Philippine Periodic Health Examination Phase 1.pdf
+    - assets/pdf/Philippine Periodic Health Examination and other Screening Tests/Vision DIsorders Screening/[CPG] Philippine Guidelines on Periodic Health Examination_ Screening for Vision Disorders.pdf
+    - assets/pdf/Prenatal Disorders/Revised PHEX3_Prenatal Manuscript_v10 043024 .pdf
+    - assets/pdf/Primary Osteoporosis and Fragility Fractures/[CPG] 2023 Screening, Diagnosis, Management, and Prevention of Primary Osteoporosis and Fragility Fractures Among Postmenopausal Women and Older Men.pdf
+    - assets/pdf/Prostate Cancer/[CPG] Philippine Clinical Practice Guideline for the Diagnosis and Management of Prostate Cance.pdf
+    - assets/pdf/Renal, Metabolic, Nutrition, and Endocrine Disorders/[CPG] Philippine Guidelines on Periodic Health Examination Renal, Metabolic, Nutrition and Endocrine Disorders.pdf
+    - assets/pdf/Sepsis and Septic Shock in Adults/[CPG] Clinical Practice Guidelines for Sepsis and Septic Shock in Adults in the Philippines.pdf
+    - assets/pdf/Stroke Rehabilitation/[CPG] Clinical Practice Guideline on Stroke Rehabilitation (Updated_ 2017).pdf
+    - assets/pdf/Tuberculosis in Adults/[CPG] Philippine Clinical Practice Guidelines for the Diagnosis and Treatment of Adult Tuberculosis_ 2021 Update.pdf
+    - assets/pdf/Urinary Tract Infection/UTI_Guidelines.pdf
+    - assets/pdf/Well-Differentiated Thyroid Cancer/[CPG] The Philippine Interim Clinical Practice Guidelines for the Diagnosis and Management of Well-Differentiated Thyroid Cancer 2021.pdf
+    - assets/pdf/Wilms Tumor/[CPG] Philippine Guidelines on the Management of Wilms Tumor.pdf
+
+    # Archive PDF Paths
+    - assets/pdf/COVID-19/Archived/[CPG] Philippine COVID-19 Living Clinical Practice Guidelines Phase 1.pdf
+    - assets/pdf/Immunization for Adults/Archived/[CPG] Philippine Guidelines on Periodic Health Examination_ Immunization for Adult.pdf
 
   fonts:
     - family: Poppins
