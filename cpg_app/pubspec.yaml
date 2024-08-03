@@ -29,6 +29,7 @@ flutter:
   assets:
     - assets/lottie/
     - assets/img/
+    - assets/img/listItemImages/
       # Active PDF Paths
     - assets/pdf/AcuteInfectiousDiarrhea/TheCPGontheManagementofAcuteInfectiousDiarrheainChildrenandAdults.pdf
     - assets/pdf/Acute ischemic Stroke and Intracerebral Hemorrhage/[CPG] Clinical Practice Guidelines on the Management of Acute Ischemic Stroke and Intracerebral Hemorrhage in the Philippines 2024.pdf

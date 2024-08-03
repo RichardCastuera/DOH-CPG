@@ -36,7 +36,7 @@ class _ContentScreenState extends State<ContentScreen> {
 
     return SafeArea(
       child: Scaffold(
-        appBar: applicationAppBar(),
+        appBar: applicationAppBar('DOH Guidelines'),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
           child: Column(

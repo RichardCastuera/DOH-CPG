@@ -606,8 +606,8 @@ List<CPGData> cpgDataList = [
       'assets/pdf/Philippine Periodic Health Examination and other Screening Tests/Hearing Disorders Screening/[CPG] Philippine Guidelines on Periodic Health Examination_ Screening for Hearing Disorders.pdf',
       'assets/pdf/Philippine Periodic Health Examination and other Screening Tests/Infectious Disease Screening/[CPG] Philippine Guidelines on Periodic Health Examination Screening for Infectious Diseases.pdf',
       'assets/pdf/Philippine Periodic Health Examination and other Screening Tests/Lifestyle Advice/[CPG] Philippine Guidelines on Periodic Health Examination_ Lifestyle Advice.pdf',
-      'assets/pdf/Philippine Periodic Health Examination and other Screening Tests/Mental Health and Addiction Screening/[CPG] Periodic Health Examination Screening for Mental Health and Addiction.pdf',
-      'assets/pdf/Philippine Periodic Health Examination and other Screening Tests/Musculoskeletal Disorders Screening/[CPG] Philippine Guidelines on Periodic Health Examination Screening for Musculoskeletal Disorders.pdf',
+      'assets/pdf/Philippine Periodic Health Examination and other Screening Tests/Mental Health and Addiction Screening/[CPG] PHES for Mental Health and Addiction.pdf',
+      'assets/pdf/Philippine Periodic Health Examination and other Screening Tests/Musculoskeletal Disorders Screening/[CPG] PHES for Musculoskeletal Disorders.pdf',
       'assets/pdf/Philippine Periodic Health Examination and other Screening Tests/Neoplastic Diseases Screening/[CPG] Philippine Guidelines on Periodic Health Examination_ Screening for Neoplastic Diseases.pdf',
       'assets/pdf/Philippine Periodic Health Examination and other Screening Tests/Periodic Health Examination/[CPG] Philippine Periodic Health Examination Phase 1.pdf',
       'assets/pdf/Philippine Periodic Health Examination and other Screening Tests/Vision DIsorders Screening/[CPG] Philippine Guidelines on Periodic Health Examination_ Screening for Vision Disorders.pdf',
@@ -652,7 +652,7 @@ List<CPGData> cpgDataList = [
       'Screening, Diagnosis, Management, and Prevention of Primary Osteoporosis and Fragility Fractures Among Postmenopausal Women and Older Men',
     ],
     activePDFPaths: [
-      'assets/pdf/Primary Osteoporosis and Fragility Fractures/[CPG] 2023 Philippine Clinical Practice Guidelines on Screening, Diagnosis, Management, and Prevention of Primary Osteoporosis and Fragility Fractures Among Postmenopausal Women and Older Men.pdf'
+      'assets/pdf/Primary Osteoporosis and Fragility Fractures/[CPG] 2023 Screening, Diagnosis, Management, and Prevention of Primary Osteoporosis and Fragility Fractures Among Postmenopausal Women and Older Men.pdf'
     ],
     activeFolderTags: ['Other Condition'],
     archivePDFNames: [],

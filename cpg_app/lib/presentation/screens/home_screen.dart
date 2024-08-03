@@ -1,4 +1,5 @@
-import 'package:cpg_app/presentation/screens/pages/archive_page.dart';
+import 'package:cpg_app/presentation/screens/pages/about_page.dart';
+import 'package:cpg_app/presentation/screens/pages/activity_page.dart';
 import 'package:cpg_app/presentation/screens/pages/home_page.dart';
 import 'package:cpg_app/presentation/widgets/components/app_bar.dart';
 import 'package:cpg_app/presentation/widgets/components/nav_bar.dart';
@@ -41,11 +42,12 @@ class _HomeScreenState extends State<HomeScreen> {
           });
         },
       ),
+      const ActivityPage(),
+      const AboutPage(),
     ];
 
     return SafeArea(
       child: Scaffold(
-        appBar: applicationAppBar(),
         bottomNavigationBar: applicationNavBar(
           currentPageIndex,
           (int index) {
