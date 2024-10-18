@@ -1,10 +1,12 @@
 import 'package:cpg_app/model/cpg_data.dart';
 import 'package:cpg_app/presentation/constants/app_colors.dart';
 import 'package:cpg_app/presentation/screens/PDF/pdf_viewer.dart';
+import 'package:cpg_app/presentation/screens/pdf_summary_screen.dart';
 import 'package:cpg_app/presentation/widgets/components/app_bar.dart';
 import 'package:cpg_app/presentation/widgets/components/no_data_found.dart';
 import 'package:cpg_app/presentation/widgets/components/segmented_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 enum ContentView { active, archive }
 
@@ -74,9 +76,14 @@ class _ContentScreenState extends State<ContentScreen> {
                                     context,
                                     MaterialPageRoute(
                                       builder: (context) {
+                                        final activePDFName = widget
+                                            .cpgList.activePDFNames[index];
                                         final cpgPath = widget
                                             .cpgList.activePDFPaths[index];
-                                        return PDFViewer(pdfPath: cpgPath);
+                                        return PdfSummaryScreen(
+                                          activePDFName: activePDFName,
+                                          activePDFPath: cpgPath,
+                                        );
                                       },
                                     ),
                                   );
@@ -91,8 +98,8 @@ class _ContentScreenState extends State<ContentScreen> {
                                     ),
                                     child: Row(
                                       children: [
-                                        Image.asset(
-                                          'assets/img/pdf.png',
+                                        SvgPicture.asset(
+                                          'assets/img/folder.svg',
                                           width: 50,
                                           height: 50,
                                           fit: BoxFit.contain,
@@ -145,8 +152,8 @@ class _ContentScreenState extends State<ContentScreen> {
                                     ),
                                     child: Row(
                                       children: [
-                                        Image.asset(
-                                          'assets/img/pdf.png',
+                                        SvgPicture.asset(
+                                          'assets/img/folder.svg',
                                           width: 50,
                                           height: 50,
                                           fit: BoxFit.contain,

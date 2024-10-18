@@ -1,4 +1,5 @@
 import 'package:cpg_app/presentation/widgets/components/app_bar.dart';
+import 'package:cpg_app/presentation/widgets/components/under_development.dart';
 import 'package:flutter/material.dart';
 
 class AboutPage extends StatelessWidget {
@@ -9,6 +10,7 @@ class AboutPage extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: applicationAppBar('About'),
+        body: underDevelopment('This page is under development'),
       ),
     );
   }

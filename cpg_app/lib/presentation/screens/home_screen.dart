@@ -1,7 +1,6 @@
 import 'package:cpg_app/presentation/screens/pages/about_page.dart';
 import 'package:cpg_app/presentation/screens/pages/activity_page.dart';
 import 'package:cpg_app/presentation/screens/pages/home_page.dart';
-import 'package:cpg_app/presentation/widgets/components/app_bar.dart';
 import 'package:cpg_app/presentation/widgets/components/nav_bar.dart';
 import 'package:flutter/material.dart';
 
