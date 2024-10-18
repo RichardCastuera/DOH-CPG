@@ -21,6 +21,5 @@ AppBar applicationAppBar(String screenTitle) {
       ),
     ],
     elevation: 1,
-    shadowColor: AppColors.black.withOpacity(.50),
   );
 }
