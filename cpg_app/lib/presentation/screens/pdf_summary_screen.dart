@@ -7,14 +7,13 @@ import 'package:flutter_svg/flutter_svg.dart';
 class PdfSummaryScreen extends StatefulWidget {
   final String activePDFName;
   final String activePDFPath;
-  final Widget?
-      activeSummaryRecommendations; // Nullable widget for recommendations
+  final Widget? activeSummaryRecommendations;
 
   const PdfSummaryScreen({
     super.key,
     required this.activePDFName,
     required this.activePDFPath,
-    this.activeSummaryRecommendations, // Optional recommendation widget
+    this.activeSummaryRecommendations,
   });
 
   @override
@@ -92,8 +91,7 @@ class _PdfSummaryScreenState extends State<PdfSummaryScreen> {
                       context,
                       MaterialPageRoute(
                         builder: (context) {
-                          return widget
-                              .activeSummaryRecommendations!; // Navigating to the passed widget
+                          return widget.activeSummaryRecommendations!;
                         },
                       ),
                     );

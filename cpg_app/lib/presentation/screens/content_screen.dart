@@ -1,6 +1,5 @@
 import 'package:cpg_app/model/cpg_data.dart';
 import 'package:cpg_app/presentation/constants/app_colors.dart';
-import 'package:cpg_app/presentation/screens/PDF/pdf_viewer.dart';
 import 'package:cpg_app/presentation/screens/pdf_summary_screen.dart';
 import 'package:cpg_app/presentation/widgets/components/app_bar.dart';
 import 'package:cpg_app/presentation/widgets/components/no_data_found.dart';
@@ -76,19 +75,30 @@ class _ContentScreenState extends State<ContentScreen> {
                                     context,
                                     MaterialPageRoute(
                                       builder: (context) {
-                                        final activePDFName = widget
-                                            .cpgList.activePDFNames[index];
-                                        final cpgPath = widget
-                                            .cpgList.activePDFPaths[index];
+                                        final activePDFName = widget.cpgList
+                                                    .activePDFNames.length >
+                                                index
+                                            ? widget
+                                                .cpgList.activePDFNames[index]
+                                            : 'PDF Name not available';
 
-                                        final activeSummaryRecommendations = (widget
-                                                .cpgList
-                                                .activeSummaryRecommendations
-                                                .isNotEmpty)
-                                            ? widget.cpgList
-                                                    .activeSummaryRecommendations[
-                                                index]
-                                            : null;
+                                        final cpgPath = widget.cpgList
+                                                    .activePDFPaths.length >
+                                                index
+                                            ? widget
+                                                .cpgList.activePDFPaths[index]
+                                            : 'PDF Path not available';
+
+                                        final activeSummaryRecommendations =
+                                            widget
+                                                    .cpgList
+                                                    .activeSummaryRecommendations
+                                                    .isNotEmpty
+                                                ? widget
+                                                    .cpgList
+                                                    .activeSummaryRecommendations
+                                                    .first
+                                                : null;
 
                                         return PdfSummaryScreen(
                                           activePDFName: activePDFName,
@@ -148,9 +158,38 @@ class _ContentScreenState extends State<ContentScreen> {
                                     context,
                                     MaterialPageRoute(
                                       builder: (context) {
-                                        final cpgPath = widget
-                                            .cpgList.archivePDFPaths[index];
-                                        return PDFViewer(pdfPath: cpgPath);
+                                        final archivePDFName = (widget.cpgList
+                                                    .archivePDFNames.length >
+                                                index)
+                                            ? widget
+                                                .cpgList.archivePDFNames[index]
+                                            : 'Archive PDF not available';
+
+                                        final archiveCPGPath = (widget.cpgList
+                                                    .archivePDFPaths.length >
+                                                index)
+                                            ? widget
+                                                .cpgList.archivePDFPaths[index]
+                                            : 'Archive PDF path not available';
+
+                                        final activeSummaryRecommendations =
+                                            widget
+                                                    .cpgList
+                                                    .activeSummaryRecommendations
+                                                    .isNotEmpty
+                                                ? widget
+                                                    .cpgList
+                                                    .activeSummaryRecommendations
+                                                    .first
+                                                : null;
+
+                                        return PdfSummaryScreen(
+                                          activePDFName: archivePDFName,
+                                          activePDFPath: archiveCPGPath,
+                                          activeSummaryRecommendations:
+                                              activeSummaryRecommendations ??
+                                                  Container(),
+                                        );
                                       },
                                     ),
                                   );
