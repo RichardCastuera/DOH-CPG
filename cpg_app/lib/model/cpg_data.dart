@@ -1,3 +1,8 @@
+import 'package:cpg_app/presentation/screens/summary&recommendation/hyperthyroidism.dart';
+import 'package:cpg_app/presentation/screens/summary&recommendation/summary_recommendation_UD.dart';
+import 'package:cpg_app/presentation/screens/summary&recommendation/urinary_tract_infection.dart';
+import 'package:flutter/material.dart';
+
 class CPGData {
   final String folderName;
   final List<String> activePDFNames;
@@ -7,6 +12,7 @@ class CPGData {
   final List<String> archivePDFPaths;
   final List<String> archiveFolderTags;
   final String imgIconPath;
+  final List<Widget> activeSummaryRecommendations;
 
   CPGData({
     required this.folderName,
@@ -17,6 +23,7 @@ class CPGData {
     required this.archivePDFPaths,
     required this.archiveFolderTags,
     required this.imgIconPath,
+    this.activeSummaryRecommendations = const [],
   });
 }
 
@@ -34,6 +41,7 @@ List<CPGData> cpgDataList = [
     archivePDFPaths: [],
     archiveFolderTags: [],
     imgIconPath: 'assets/img/listItemImages/AcuteInfectiousDiarrhea.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Acute Ischemic Stroke and Intracerebral Hemorrhage',
@@ -49,6 +57,7 @@ List<CPGData> cpgDataList = [
     archiveFolderTags: [],
     imgIconPath:
         'assets/img/listItemImages/AcuteIschemicStrokeandIntracerebralHemorrhage.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Acute Lymphoblastic Leukemia',
@@ -63,6 +72,7 @@ List<CPGData> cpgDataList = [
     archivePDFPaths: [],
     archiveFolderTags: [],
     imgIconPath: 'assets/img/listItemImages/AcuteLymphoblasticLeukemia.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Acute Myeloid Leukemia',
@@ -77,6 +87,7 @@ List<CPGData> cpgDataList = [
     archivePDFPaths: [],
     archiveFolderTags: [],
     imgIconPath: 'assets/img/listItemImages/AcuteMyeloidLeukemia.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Breast Cancer',
@@ -91,6 +102,7 @@ List<CPGData> cpgDataList = [
     archivePDFPaths: [],
     archiveFolderTags: [],
     imgIconPath: 'assets/img/listItemImages/BreastCancer.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Burkitt Lymphoma in Children',
@@ -105,6 +117,7 @@ List<CPGData> cpgDataList = [
     archivePDFPaths: [],
     archiveFolderTags: [],
     imgIconPath: 'assets/img/listItemImages/BurkittLymphomainChildren.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Cervical Cancer',
@@ -125,6 +138,7 @@ List<CPGData> cpgDataList = [
     archivePDFPaths: [],
     archiveFolderTags: [],
     imgIconPath: 'assets/img/listItemImages/CervicalCancer.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Chronic Heart Failure with Reduced Ejection Fraction',
@@ -140,6 +154,7 @@ List<CPGData> cpgDataList = [
     archiveFolderTags: [],
     imgIconPath:
         'assets/img/listItemImages/ChronicHeartFailurewithReducedEjectionFraction.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Chronic Obstructive Pulmonary Disease',
@@ -155,6 +170,7 @@ List<CPGData> cpgDataList = [
     archiveFolderTags: [],
     imgIconPath:
         'assets/img/listItemImages/ChronicObstructivePulmonaryDisease.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Colorectal Cancer',
@@ -169,6 +185,7 @@ List<CPGData> cpgDataList = [
     archivePDFPaths: [],
     archiveFolderTags: [],
     imgIconPath: 'assets/img/listItemImages/ColorectalCancer.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Contact Dermatitis',
@@ -183,6 +200,7 @@ List<CPGData> cpgDataList = [
     archivePDFPaths: [],
     archiveFolderTags: [],
     imgIconPath: 'assets/img/listItemImages/ContactDermatitis.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'COVID-19',
@@ -210,6 +228,7 @@ List<CPGData> cpgDataList = [
       'Infectious Diseases',
     ],
     imgIconPath: 'assets/img/listItemImages/COVID-19.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Dengue',
@@ -224,6 +243,7 @@ List<CPGData> cpgDataList = [
     archivePDFPaths: [],
     archiveFolderTags: [],
     imgIconPath: 'assets/img/listItemImages/Dengue.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Diffuse Large B-Cell Lymphoma',
@@ -241,6 +261,7 @@ List<CPGData> cpgDataList = [
     archivePDFPaths: [],
     archiveFolderTags: [],
     imgIconPath: 'assets/img/listItemImages/DiffuseLargeBCellLymphoma.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Dyslipidemia',
@@ -255,6 +276,7 @@ List<CPGData> cpgDataList = [
     archivePDFPaths: [],
     archiveFolderTags: [],
     imgIconPath: 'assets/img/listItemImages/Dyslipidemia.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'End of life care for Adults with Cancer',
@@ -275,6 +297,7 @@ List<CPGData> cpgDataList = [
     archiveFolderTags: [],
     imgIconPath:
         'assets/img/listItemImages/EndoflifecareforAdultswithCancer.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Gastric Cancer and Helicobacter Pylori',
@@ -293,6 +316,7 @@ List<CPGData> cpgDataList = [
     archiveFolderTags: [],
     imgIconPath:
         'assets/img/listItemImages/GastricCancerandHelicobacterPylori.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Head and Neck Cancer',
@@ -310,6 +334,7 @@ List<CPGData> cpgDataList = [
     archivePDFPaths: [],
     archiveFolderTags: [],
     imgIconPath: 'assets/img/listItemImages/HeadandNeckCancer.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Hemodialysis',
@@ -324,6 +349,7 @@ List<CPGData> cpgDataList = [
     archivePDFPaths: [],
     archiveFolderTags: [],
     imgIconPath: 'assets/img/listItemImages/Hemodialysis.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Hepatitis B',
@@ -338,6 +364,7 @@ List<CPGData> cpgDataList = [
     archivePDFPaths: [],
     archiveFolderTags: [],
     imgIconPath: 'assets/img/listItemImages/HepatitisB.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Hepatocellular Carcinoma',
@@ -355,6 +382,7 @@ List<CPGData> cpgDataList = [
     archivePDFPaths: [],
     archiveFolderTags: [],
     imgIconPath: 'assets/img/listItemImages/HepatocellularCarcinoma.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Hypertension',
@@ -369,6 +397,7 @@ List<CPGData> cpgDataList = [
     archivePDFPaths: [],
     archiveFolderTags: [],
     imgIconPath: 'assets/img/listItemImages/Hypertension.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Hyperthyroidism',
@@ -383,6 +412,7 @@ List<CPGData> cpgDataList = [
     archivePDFPaths: [],
     archiveFolderTags: [],
     imgIconPath: 'assets/img/listItemImages/Hyperthyroidism.png',
+    activeSummaryRecommendations: [const HYPERTHYROIDISMSumRec()],
   ),
   CPGData(
     folderName: 'Immunization for Adults',
@@ -402,6 +432,7 @@ List<CPGData> cpgDataList = [
       'Adult',
     ],
     imgIconPath: 'assets/img/listItemImages/ImmunizationforAdults.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Immunization for Women',
@@ -419,6 +450,7 @@ List<CPGData> cpgDataList = [
     archivePDFPaths: [],
     archiveFolderTags: [],
     imgIconPath: 'assets/img/listItemImages/ImmunizationforWomen.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Isolated Mandibular Fracture in Adults',
@@ -437,6 +469,7 @@ List<CPGData> cpgDataList = [
     archiveFolderTags: [],
     imgIconPath:
         'assets/img/listItemImages/IsolatedMandibularFractureinAdults.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Leprosy',
@@ -451,6 +484,7 @@ List<CPGData> cpgDataList = [
     archivePDFPaths: [],
     archiveFolderTags: [],
     imgIconPath: 'assets/img/listItemImages/Leprosy.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Low Back Pain',
@@ -465,6 +499,7 @@ List<CPGData> cpgDataList = [
     archivePDFPaths: [],
     archiveFolderTags: [],
     imgIconPath: 'assets/img/listItemImages/LowBackPain.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Lung Cancer',
@@ -479,6 +514,7 @@ List<CPGData> cpgDataList = [
     archivePDFPaths: [],
     archiveFolderTags: [],
     imgIconPath: 'assets/img/listItemImages/LungCancer.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Neonatal Sepsis',
@@ -496,6 +532,7 @@ List<CPGData> cpgDataList = [
     archivePDFPaths: [],
     archiveFolderTags: [],
     imgIconPath: 'assets/img/listItemImages/NeonatalSepsis.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Nicotine Dependence',
@@ -513,6 +550,7 @@ List<CPGData> cpgDataList = [
     archivePDFPaths: [],
     archiveFolderTags: [],
     imgIconPath: 'assets/img/listItemImages/NicotineDependence.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Obesity Screening and Diagnosis in Adults',
@@ -532,6 +570,7 @@ List<CPGData> cpgDataList = [
     archiveFolderTags: [],
     imgIconPath:
         'assets/img/listItemImages/ObesityScreeningandDiagnosisinAdults.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Pediatric Asthma',
@@ -549,6 +588,7 @@ List<CPGData> cpgDataList = [
     archivePDFPaths: [],
     archiveFolderTags: [],
     imgIconPath: 'assets/img/listItemImages/PediatricAsthma.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Pediatric Community Acquired Pneumonia',
@@ -567,6 +607,7 @@ List<CPGData> cpgDataList = [
     archiveFolderTags: [],
     imgIconPath:
         'assets/img/listItemImages/PediatricCommunityAcquiredPneumonia.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Pediatric Immunization',
@@ -584,6 +625,7 @@ List<CPGData> cpgDataList = [
     archivePDFPaths: [],
     archiveFolderTags: [],
     imgIconPath: 'assets/img/listItemImages/PediatricImmunization.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName:
@@ -627,6 +669,7 @@ List<CPGData> cpgDataList = [
     archiveFolderTags: [],
     imgIconPath:
         'assets/img/listItemImages/PhilippinePeriodicHealthExaminationandotherScreeningTests.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Prenatal Disorders',
@@ -645,6 +688,7 @@ List<CPGData> cpgDataList = [
     archivePDFPaths: [],
     archiveFolderTags: [],
     imgIconPath: 'assets/img/listItemImages/PrenatalDisorders.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Primary Osteoporosis and Fragility Fractures',
@@ -660,6 +704,7 @@ List<CPGData> cpgDataList = [
     archiveFolderTags: [],
     imgIconPath:
         'assets/img/listItemImages/PrimaryOsteoporosisandFragilityFractures.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Prostate Cancer',
@@ -678,6 +723,7 @@ List<CPGData> cpgDataList = [
     archivePDFPaths: [],
     archiveFolderTags: [],
     imgIconPath: 'assets/img/listItemImages/ProstateCancer.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Renal, Metabolic, Nutrition, and Endocrine Disorders',
@@ -693,6 +739,7 @@ List<CPGData> cpgDataList = [
     archiveFolderTags: [],
     imgIconPath:
         'assets/img/listItemImages/Renal,Metabolic,Nutrition,andEndocrineDisorders.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Sepsis and Septic Shock in Adults',
@@ -710,6 +757,7 @@ List<CPGData> cpgDataList = [
     archivePDFPaths: [],
     archiveFolderTags: [],
     imgIconPath: 'assets/img/listItemImages/SepsisandSepticShockinAdults.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Stroke Rehabilitation',
@@ -727,6 +775,7 @@ List<CPGData> cpgDataList = [
     archivePDFPaths: [],
     archiveFolderTags: [],
     imgIconPath: 'assets/img/listItemImages/StrokeRehabilitation.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Tuberculosis in Adults',
@@ -741,19 +790,20 @@ List<CPGData> cpgDataList = [
     archivePDFPaths: [],
     archiveFolderTags: [],
     imgIconPath: 'assets/img/listItemImages/TuberculosisinAdults.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
-    folderName: 'Urinary Tract Infection',
-    activePDFNames: [
-      'Diagnosis and Management of Urinary Tract Infection Among Filipino Children and Adults',
-    ],
-    activePDFPaths: ['assets/pdf/Urinary Tract Infection/UTI_Guidelines.pdf'],
-    activeFolderTags: ['Infectious Diseases'],
-    archivePDFNames: [],
-    archivePDFPaths: [],
-    archiveFolderTags: [],
-    imgIconPath: 'assets/img/listItemImages/UrinaryTractInfection.png',
-  ),
+      folderName: 'Urinary Tract Infection',
+      activePDFNames: [
+        'Diagnosis and Management of Urinary Tract Infection Among Filipino Children and Adults',
+      ],
+      activePDFPaths: ['assets/pdf/Urinary Tract Infection/UTI_Guidelines.pdf'],
+      activeFolderTags: ['Infectious Diseases'],
+      archivePDFNames: [],
+      archivePDFPaths: [],
+      archiveFolderTags: [],
+      imgIconPath: 'assets/img/listItemImages/UrinaryTractInfection.png',
+      activeSummaryRecommendations: [const UTISumRec()]),
   CPGData(
     folderName: 'Well-Differentiated Thyroid Cancer',
     activePDFNames: [
@@ -771,6 +821,7 @@ List<CPGData> cpgDataList = [
     archiveFolderTags: [],
     imgIconPath:
         'assets/img/listItemImages/Well-DifferentiatedThyroidCancer.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
   CPGData(
     folderName: 'Wilms Tumor',
@@ -788,5 +839,6 @@ List<CPGData> cpgDataList = [
     archivePDFPaths: [],
     archiveFolderTags: [],
     imgIconPath: 'assets/img/listItemImages/WilmsTumor.png',
+    activeSummaryRecommendations: [const UDSummaryRecommendations()],
   ),
 ];

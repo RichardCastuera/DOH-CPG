@@ -1,6 +1,5 @@
 import 'package:cpg_app/presentation/constants/app_colors.dart';
 import 'package:cpg_app/presentation/screens/PDF/pdf_viewer.dart';
-import 'package:cpg_app/presentation/screens/summary&recommendation/urinary_tract_infection.dart';
 import 'package:cpg_app/presentation/widgets/components/app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -8,10 +7,14 @@ import 'package:flutter_svg/flutter_svg.dart';
 class PdfSummaryScreen extends StatefulWidget {
   final String activePDFName;
   final String activePDFPath;
+  final Widget?
+      activeSummaryRecommendations; // Nullable widget for recommendations
+
   const PdfSummaryScreen({
     super.key,
     required this.activePDFName,
     required this.activePDFPath,
+    this.activeSummaryRecommendations, // Optional recommendation widget
   });
 
   @override
@@ -46,9 +49,6 @@ class _PdfSummaryScreenState extends State<PdfSummaryScreen> {
                     MaterialPageRoute(
                       builder: (context) {
                         return PDFViewer(pdfPath: widget.activePDFPath);
-                        // final activePDFName =
-                        //     widget.cpgList.activePDFNames[index];
-                        // return PdfSummaryScreen(activePDFName: activePDFName);
                       },
                     ),
                   );
@@ -85,48 +85,50 @@ class _PdfSummaryScreenState extends State<PdfSummaryScreen> {
                 ),
               ),
               const SizedBox(height: 10),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return const UTISumRec();
-                      },
-                    ),
-                  );
-                },
-                child: Card(
-                  margin: const EdgeInsets.symmetric(vertical: 8.0),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 10.0,
-                      vertical: 10.0,
-                    ),
-                    child: Row(
-                      children: [
-                        SvgPicture.asset(
-                          'assets/img/sum.svg',
-                          width: 50,
-                          height: 50,
-                          fit: BoxFit.contain,
-                        ),
-                        const SizedBox(width: 15),
-                        const Expanded(
-                          child: Text(
-                            'Summary Recommendations',
-                            style: TextStyle(
-                              fontSize: 14,
-                              fontFamily: 'Poppins',
-                              color: AppColors.black,
+              if (widget.activeSummaryRecommendations != null)
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return widget
+                              .activeSummaryRecommendations!; // Navigating to the passed widget
+                        },
+                      ),
+                    );
+                  },
+                  child: Card(
+                    margin: const EdgeInsets.symmetric(vertical: 8.0),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 10.0,
+                        vertical: 10.0,
+                      ),
+                      child: Row(
+                        children: [
+                          SvgPicture.asset(
+                            'assets/img/sum.svg',
+                            width: 50,
+                            height: 50,
+                            fit: BoxFit.contain,
+                          ),
+                          const SizedBox(width: 15),
+                          const Expanded(
+                            child: Text(
+                              'Summary Recommendations',
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontFamily: 'Poppins',
+                                color: AppColors.black,
+                              ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ),
-              ),
             ],
           ),
         ),

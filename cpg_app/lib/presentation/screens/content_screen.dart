@@ -80,9 +80,22 @@ class _ContentScreenState extends State<ContentScreen> {
                                             .cpgList.activePDFNames[index];
                                         final cpgPath = widget
                                             .cpgList.activePDFPaths[index];
+
+                                        final activeSummaryRecommendations = (widget
+                                                .cpgList
+                                                .activeSummaryRecommendations
+                                                .isNotEmpty)
+                                            ? widget.cpgList
+                                                    .activeSummaryRecommendations[
+                                                index]
+                                            : null;
+
                                         return PdfSummaryScreen(
                                           activePDFName: activePDFName,
                                           activePDFPath: cpgPath,
+                                          activeSummaryRecommendations:
+                                              activeSummaryRecommendations ??
+                                                  Container(),
                                         );
                                       },
                                     ),

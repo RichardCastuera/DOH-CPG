@@ -16,6 +16,7 @@ dependencies:
   syncfusion_flutter_pdfviewer: ^26.1.41
   lottie: ^3.1.2
   flutter_svg: ^2.0.10+1
+  expansion_tile_card: ^3.0.0
 
 dev_dependencies:
   flutter_test:
